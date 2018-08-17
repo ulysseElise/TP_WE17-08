@@ -29,9 +29,8 @@ public class Client implements Serializable{
 	
 	
 	// Ctor
-	public Client() {
-		super();
-	}
+	public Client() {}
+	
 	public Client(String nomClient, String adresse, String email, String tel) {
 		super();
 		this.nomClient = nomClient;
