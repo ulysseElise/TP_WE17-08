@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity(name="commande")
-@Table(name="commandes")
+@Table(name="commandes") 
 public class Commande implements Serializable{
 
 	@Id

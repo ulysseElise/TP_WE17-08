@@ -20,7 +20,7 @@ public class Client implements Serializable{
 	@Column(name="nom_client")
 	private String nomClient;
 	@Column(name="adresse")
-	private String adresse;
+	private String adresse; 
 	@Column(name="email")
 	private String email;
 	@Column(name="tel")
