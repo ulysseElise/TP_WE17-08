@@ -9,7 +9,7 @@ public class Produit {
 	private int quantite;
 	private boolean selectionne;
 	private String photo;
-	
+	 
 	// Ctor
 	public Produit() {}
 
