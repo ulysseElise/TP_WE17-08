@@ -1,37 +1,50 @@
 package com.intiformation.entity;
 
+import javax.persistence.*;
+
+@Entity(name="produit")
+@Table(name="produits")
 public class Produit {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id_produit")
 	private long idProduit;
+	@Column(name="designation")
 	private String designation;
+	@Column(name="description")
 	private String description;
+	@Column(name="prix")
 	private double prix;
+	@Column(name="quantite")
 	private int quantite;
+	@Column(name="selectionne")
 	private boolean selectionne;
-	private String photo;
+	@Column(name="photo_produit")
+	private String photoProduit;
 	
 	// Ctor
 	public Produit() {}
 
 	public Produit(String designation, String description, double prix, int quantite, boolean selectionne,
-			String photo) {
+			String photoProduit) {
 		this.designation = designation;
 		this.description = description;
 		this.prix = prix;
 		this.quantite = quantite;
 		this.selectionne = selectionne;
-		this.photo = photo;
+		this.photoProduit = photoProduit;
 	}
 
 	public Produit(long idProduit, String designation, String description, double prix, int quantite,
-			boolean selectionne, String photo) {
+			boolean selectionne, String photoProduit) {
 		this.idProduit = idProduit;
 		this.designation = designation;
 		this.description = description;
 		this.prix = prix;
 		this.quantite = quantite;
 		this.selectionne = selectionne;
-		this.photo = photo;
+		this.photoProduit = photoProduit;
 	}
 	
 	// Getters Setters
@@ -53,9 +66,9 @@ public class Produit {
 	public boolean isSelectionne() {return selectionne;}
 	public void setSelectionne(boolean selectionne) {this.selectionne = selectionne;}
 
-	public String getPhoto() {return photo;}
+	public String getPhoto() {return photoProduit;}
 
-	public void setPhoto(String photo) {this.photo = photo;}
+	public void setPhoto(String photoProduit) {this.photoProduit = photoProduit;}
 	
 	
 	
