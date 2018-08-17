@@ -23,6 +23,7 @@ public class Produit {
 	@Column(name="photo_produit")
 	private String photoProduit;
 	
+	
 	// Ctor
 	public Produit() {}
 
