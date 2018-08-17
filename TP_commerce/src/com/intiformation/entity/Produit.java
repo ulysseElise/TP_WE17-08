@@ -10,6 +10,7 @@ public class Produit {
 	private boolean selectionne;
 	private String photo;
 	
+	// Ctor
 	public Produit() {}
 
 	public Produit(String designation, String description, double prix, int quantite, boolean selectionne,
@@ -32,7 +33,8 @@ public class Produit {
 		this.selectionne = selectionne;
 		this.photo = photo;
 	}
-
+	
+	// Getters Setters
 	public long getIdProduit() {return idProduit;}
 	public void setIdProduit(long idProduit) {this.idProduit = idProduit;}
 
