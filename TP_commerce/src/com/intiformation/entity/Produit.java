@@ -20,9 +20,14 @@ public class Produit {
 	private int quantite;
 	@Column(name="selectionne")
 	private boolean selectionne;
+<<<<<<< HEAD
 	@Column(name="photo_produit")
 	private String photoProduit;
 	
+=======
+	private String photo;
+	 
+>>>>>>> master
 	// Ctor
 	public Produit() {}
 
