@@ -22,7 +22,8 @@ public class Produit {
 	private boolean selectionne;
 	@Column(name="photo_produit")
 	private String photoProduit;
-	 
+	
+	
 	// Ctor
 	public Produit() {}
 
