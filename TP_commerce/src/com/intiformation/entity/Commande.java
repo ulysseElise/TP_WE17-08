@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity(name="commande")
 @Table(name="commandes") 
-public class Commande implements Serializable{
+public class Commande implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,33 +22,24 @@ public class Commande implements Serializable{
 	
 	
 	// Ctor
-	public Commande() {
-		super();
-	}
+	public Commande() {}
+	
 	public Commande(String dateCommande) {
-		super();
 		this.dateCommande = dateCommande;
 	}
+	
 	public Commande(int idCommande, String dateCommande) {
-		super();
 		this.idCommande = idCommande;
 		this.dateCommande = dateCommande;
 	}
 	
 	
 	// Getters Setters
-	public int getIdCommande() {
-		return idCommande;
-	}
-	public void setIdCommande(int idCommande) {
-		this.idCommande = idCommande;
-	}
-	public String getDateCommande() {
-		return dateCommande;
-	}
-	public void setDateCommande(String dateCommande) {
-		this.dateCommande = dateCommande;
-	}
+	public int getIdCommande() {return idCommande;}
+	public void setIdCommande(int idCommande) {this.idCommande = idCommande;}
+	
+	public String getDateCommande() {return dateCommande;}
+	public void setDateCommande(String dateCommande) {this.dateCommande = dateCommande;}
 	
 	
 	
