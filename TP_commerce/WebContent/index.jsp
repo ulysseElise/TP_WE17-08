@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Test</h1>
+
+	<a href="/views/accueil.jsp">accueil</a>
 </body>
 </html>
