@@ -1,10 +1,12 @@
 package com.intiformation.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity(name="categorie")
 @Table(name="categories")
-public class Categorie {
+public class Categorie implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -16,6 +18,9 @@ public class Categorie {
 	private String photoCategorie;
 	@Column(name="description")
 	private String Description;
+	
+	@OneToOne(mappedBy = "categorie", cascade = CascadeType.ALL)
+    private Produit produit;
 	
 	public Categorie() {}
 	
@@ -43,6 +48,22 @@ public class Categorie {
 
 	public String getDescription() {return Description;}
 	public void setDescription(String description) {Description = description;}
+
+	public String getPhotoCategorie() {
+		return photoCategorie;
+	}
+
+	public void setPhotoCategorie(String photoCategorie) {
+		this.photoCategorie = photoCategorie;
+	}
+
+	public Produit getProduit() {
+		return produit;
+	}
+
+	public void setProduit(Produit produit) {
+		this.produit = produit;
+	}
 	
 	
 }
