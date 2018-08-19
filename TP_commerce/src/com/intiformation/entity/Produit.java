@@ -10,7 +10,6 @@ public class Produit {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id_produit")
 	private long idProduit;
 	@Column(name="designation")
 	private String designation;

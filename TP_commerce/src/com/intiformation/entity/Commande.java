@@ -20,7 +20,6 @@ public class Commande implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id_commande")
 	private int idCommande;
 	@Column(name="date_commande")
 	private String dateCommande;

@@ -41,8 +41,8 @@
 <!-- 	///////////////////////////////Déclaration des classes annotées : Mapping/////////////////////////////// -->
 		<property name="annotatedClasses">
 			<list>
-				<value>com.intiformation.entity.Categorie</value>
 				<value>com.intiformation.entity.Client</value>
+				<value>com.intiformation.entity.Categorie</value>
 				<value>com.intiformation.entity.Commande</value>
 				<value>com.intiformation.entity.LigneCommande</value>
 				<value>com.intiformation.entity.Produit</value>

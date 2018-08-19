@@ -17,7 +17,6 @@ public class LigneCommande implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id_ligne_commande")
 	private int idLigneCommande;
 	@Column(name="quantite_ligne_commande")
 	private int quantite;

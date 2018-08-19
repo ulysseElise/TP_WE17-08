@@ -18,7 +18,7 @@ import com.intiformation.entity.Produit;
  */
 @Transactional
 @Service // Déclare un bean de service dans le conteneur
-public class BoutiqueService{
+public class BoutiqueService implements IBoutiqueService{
 
 	// Déclaration de la couche DAO
 	@Autowired // Injection par type du DAO

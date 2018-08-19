@@ -17,16 +17,17 @@ import org.springframework.web.servlet.ModelAndView;
 import com.intiformation.entity.Categorie;
 import com.intiformation.entity.Produit;
 import com.intiformation.service.BoutiqueService;
+import com.intiformation.service.IBoutiqueService;
 
 @Controller
 public class BoutiqueController {
 
 	// Déclaration du service
 	@Autowired
-	private BoutiqueService boutiqueManager;
+	private IBoutiqueService boutiqueManager;
 
 	// Setter pour permettre à Spring d'injecter
-	public void setFonctionnaireManager(BoutiqueService boutiqueManager) {
+	public void setFonctionnaireManager(IBoutiqueService boutiqueManager) {
 		this.boutiqueManager = boutiqueManager;
 	}
 	
