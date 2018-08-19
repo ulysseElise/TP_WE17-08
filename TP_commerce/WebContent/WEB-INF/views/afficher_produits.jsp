@@ -11,10 +11,9 @@
 <body>
 	<div align="left">
 		<table>
-			<form:form modelAttribute="ProduitCommand" action="Produit/add" method="post">
+			<form:form modelAttribute="ProduitCommand" action="${pageContext.request.contextPath}/produit/add" method="post">
 				<tr>
-					<td><form:label path="IdProduit">Identifiantt</form:label></td>
-					<td></td>
+					<td><form:hidden path="idProduit"/></td>
 				</tr>
 				<tr>
 					<td><form:label path="categorie">Categorie : </form:label></td>
