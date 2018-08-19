@@ -34,9 +34,10 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			/WEB-INF/applicatinContext-datasource.xml
-			/WEB-INF/applicatinContext-hibernate.xml
-			/WEB-INF/applicatinContext-security.xml
+			/WEB-INF/applicationContext-datasource.xml
+			/WEB-INF/applicationContext-hibernate.xml
+			/WEB-INF/applicationContext-security.xml
+			/WEB-INF/gestionboutique-servlet.xml
 		</param-value>
 	</context-param>
 
