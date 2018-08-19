@@ -10,7 +10,7 @@
 	<table align="center" cellspacing="10">
 		<tr style="color: blue; font-style: italic; font-size: 14px;">
 			<td align="left">Clickez ici</td>
-			<td><a href="¤${pageContext.request.contextPath}/gestion/produit">liste des produits</a></td>
+			<td><a href="${pageContext.request.contextPath}/gestion/produit">liste des produits</a></td>
 		</tr>
 	</table>
 
