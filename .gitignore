@@ -1,3 +1,7 @@
 
 TP_commerce/build/classes/com/intiformation/dao/BoutiqueDAOImpl.class
 TP_commerce/build/classes/com/intiformation/dao/IBoutiqueDAO.class
+TP_commerce/build/classes/com/intiformation/dao/ClientDAO.class
+TP_commerce/build/classes/com/intiformation/dao/BoutiqueDAOImpl.class
+TP_commerce/WebContent/WEB-INF/applicationContext-hibernate.xml
+TP_commerce/WebContent/WEB-INF/web.xml
