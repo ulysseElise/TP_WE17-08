@@ -1,13 +1,56 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>page afficher</title>
 </head>
 <body>
+	<div align="left">
+		<table>
+			<form:form modelAttribute="Command" action="Produit/add" method="post">
+				<tr>
+					<td><form:label path="IdProduit">Identifiantt</form:label></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><form:label path="categorie">Categorie : </form:label></td>
+					<td>
+<%-- 						<form:select path="categorie" items="${ListCategorieNom}"/> --%>
+					</td>
+				</tr>
+				<tr>
+					<td><form:label path="designation">Designation : </form:label></td>
+					<td><form:input path="designation"/></td>
+				</tr>
+				<tr>
+					<td><form:label path="description">Description : </form:label></td>
+					<td><form:input path="description"/></td>
+				</tr>
+				<tr>
+					<td><form:label path="prix">Prix : </form:label></td>
+					<td><form:input path="prix"/></td>
+				</tr>
+				<tr>
+					<td><form:label path="selectionne">Selectionne : </form:label></td>
+					<td><form:checkbox path="selectionne"/></td>
+				</tr>
+				<tr>
+					<td><form:label path="quantite">Quantite : </form:label></td>
+					<td><form:input path="quantite"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Ajouter"/></td>
+				</tr>
+			</form:form>
+		</table>
+	</div>
+
+
+
 	<div align="center">
 		<h1 style="background-color: lightgreen; color: darkgreen;">
 			Liste des Produits
@@ -21,15 +64,15 @@
 			
 			<tr bgcolor="grey" style="color: white;">
 				<th>Identifiant</th>
-				<th>Nom</th>
-				<th>Prenom</th>
-				<th>Fonction</th>
-				<th>Departement</th>
-				<th>Salaire</th>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Prix</th>
+				<th>Quantite</th>
+				<th>Selectionne</th>
 <!-- 				<th style="color: grey;">Supprimer</th> -->
 <!-- 				<th style="color: green;">Modifier</th> -->
 			</tr>
-			<c:forEach items="${------}" var="prod">
+			<c:forEach items="${ListeProduits}" var="prod">
 				<tr bgcolor="lightyellow">
 					<td>${prod.idProduit}</td>
 					<td>${prod.designation}</td>
