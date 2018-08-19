@@ -8,6 +8,6 @@
 </head>
 <body>
 
-	<a href="/views/accueil.jsp">accueil</a>
+	<% response.sendRedirect("/"); %>
 </body>
 </html>
