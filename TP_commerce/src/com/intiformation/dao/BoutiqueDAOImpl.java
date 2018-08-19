@@ -68,8 +68,8 @@ public class BoutiqueDAOImpl implements IBoutiqueDAO {
 	}
 
 	@Override
-	public void supprimerCategrorie(Long idcat) {
-		sessionFactory.getCurrentSession().delete(getCategorie(idcat));
+	public void supprimerCategrorie(Long idCat) {
+		sessionFactory.getCurrentSession().delete(getCategorie(idCat));
 	}
 
 	@Override
@@ -79,21 +79,19 @@ public class BoutiqueDAOImpl implements IBoutiqueDAO {
 
 	@Override
 	public Long ajouterProduit(Produit p, Long idCat) {
-		int idProduit = (int) sessionFactory.getCurrentSession().save(p);
-		return idCategorie;
-		return null;
+		p.setCategorie(getCategorie(idCat));
+		Long idProduit = (Long) sessionFactory.getCurrentSession().save(p);
+		return idProduit;
 	}
 
 	@Override
 	public void supprimerProduit(Long idP) {
-		// TODO Auto-generated method stub
-		
+		sessionFactory.getCurrentSession().delete(getProduit(idP));
 	}
 
 	@Override
 	public void modifierProduit(Produit p) {
-		// TODO Auto-generated method stub
-		
+		sessionFactory.getCurrentSession().update(p);
 	}
 
 }
