@@ -11,18 +11,23 @@
 
 <!-- The front controller of this Spring Web application, responsible for handling all application requests -->
 	<servlet>
-		<servlet-name>springDispatcherServlet</servlet-name><!-- nom par defaut -->
+		<servlet-name>gestionboutique</servlet-name><!-- nom par defaut -->
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<!-- Map all requests to the DispatcherServlet for handling -->
 	<servlet-mapping>
-		<servlet-name>springDispatcherServlet</servlet-name><!-- nom par defaut -->
+		<servlet-name>gestionboutique</servlet-name><!-- nom par defaut -->
 		<url-pattern>/</url-pattern><!-- prends tout les liens -->
 	</servlet-mapping>
 
 
+
+	<!-- Bootstraps the root web application context before servlet initialization -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
 
 <!-- needed for ContextLoaderListener -->
@@ -34,11 +39,6 @@
 			/WEB-INF/applicatinContext-security.xml
 		</param-value>
 	</context-param>
-
-	<!-- Bootstraps the root web application context before servlet initialization -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
 
 
 
