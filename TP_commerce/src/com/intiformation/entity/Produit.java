@@ -1,5 +1,7 @@
 package com.intiformation.entity;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity(name="produit")
@@ -22,6 +24,15 @@ public class Produit {
 	private boolean selectionne;
 	@Column(name="photo_produit")
 	private String photoProduit;
+	
+	@OneToMany(mappedBy = "produit", targetEntity = LigneCommande.class, cascade = CascadeType.ALL)
+    private List<LigneCommande> ligneCommande;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+    // referencedColumnName : référence de la variable JAVA qui représente l'id de la table Categorie
+    @JoinColumn(name = "categorie_id", referencedColumnName = "idCategorie")
+    private Categorie categorie;
+	
 	
 	
 	// Ctor
@@ -70,6 +81,30 @@ public class Produit {
 	public String getPhoto() {return photoProduit;}
 
 	public void setPhoto(String photoProduit) {this.photoProduit = photoProduit;}
+
+	public String getPhotoProduit() {
+		return photoProduit;
+	}
+
+	public void setPhotoProduit(String photoProduit) {
+		this.photoProduit = photoProduit;
+	}
+
+	public List<LigneCommande> getLigneCommande() {
+		return ligneCommande;
+	}
+
+	public void setLigneCommande(List<LigneCommande> ligneCommande) {
+		this.ligneCommande = ligneCommande;
+	}
+
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
 	
 	
 	

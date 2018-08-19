@@ -64,6 +64,7 @@ public class Categorie implements Serializable{
 	public void setProduit(Produit produit) {
 		this.produit = produit;
 	}
-	
+
+
 	
 }

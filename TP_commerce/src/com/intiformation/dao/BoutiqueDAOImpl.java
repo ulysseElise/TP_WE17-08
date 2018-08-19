@@ -63,25 +63,24 @@ public class BoutiqueDAOImpl implements IBoutiqueDAO {
 
 	@Override
 	public long ajouterCategorie(Categorie c) {
-		// TODO Auto-generated method stub
-		return 0;
+		int idCategorie = (int) sessionFactory.getCurrentSession().save(c);
+		return idCategorie;
 	}
 
 	@Override
 	public void supprimerCategrorie(Long idcat) {
-		// TODO Auto-generated method stub
-		
+		sessionFactory.getCurrentSession().delete(getCategorie(idcat));
 	}
 
 	@Override
 	public void modifierCategorie(Categorie c) {
-		// TODO Auto-generated method stub
-		
+		sessionFactory.getCurrentSession().update(c);		
 	}
 
 	@Override
 	public Long ajouterProduit(Produit p, Long idCat) {
-		// TODO Auto-generated method stub
+		int idProduit = (int) sessionFactory.getCurrentSession().save(p);
+		return idCategorie;
 		return null;
 	}
 

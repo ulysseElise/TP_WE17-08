@@ -21,6 +21,8 @@ public class Client implements Serializable {
 	@Column(name="tel")
 	private String tel;
 	
+	@OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
+    private Commande commande;
 	
 	
 	// Ctor
@@ -56,6 +58,14 @@ public class Client implements Serializable {
 	
 	public String getTel() {return tel;}
 	public void setTel(String tel) {this.tel = tel;}
+
+	public Commande getCommande() {
+		return commande;
+	}
+
+	public void setCommande(Commande commande) {
+		this.commande = commande;
+	}
 	
 	
 }
