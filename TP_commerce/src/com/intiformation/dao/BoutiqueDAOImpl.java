@@ -6,10 +6,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.intiformation.entity.*;
 
 @Repository // Déclare un bean du DAO dans le conteneur spring
+@Transactional
 public class BoutiqueDAOImpl implements IBoutiqueDAO {
 
 	//à injecter sur spring, la session et son setter
@@ -37,8 +39,8 @@ public class BoutiqueDAOImpl implements IBoutiqueDAO {
 	@Override
 	public List<Produit> produitsParMotCle(String mc) {
 		//à tester mais j'y crois
-		Query query = sessionFactory.getCurrentSession().createQuery("FROM produit p WHERE p.description LIKE :motCle");
-		query.setParameter("motCle", "%"+mc+"%");
+		Query query = sessionFactory.getCurrentSession().createQuery("FROM produit p WHERE p.description LIKE %:motCle%");
+		query.setParameter("motCle", mc);
 		return query.list();
 	}
 
