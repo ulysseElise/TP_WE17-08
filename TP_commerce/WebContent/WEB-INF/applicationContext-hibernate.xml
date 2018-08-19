@@ -12,7 +12,7 @@
 	<context:annotation-config/>
 	
 <!-- 	2. Activer la détection automatique des beans en scanant le contenu du package : com.intiformation.springmvc-->
-	<context:component-scan base-package="com.intiformation.springmvc"/>
+	<context:component-scan base-package="com.intiformation"/>
 	
 <!-- 	3. Activer la gestion déclarative des transactions @Transactional -->
 	<tx:annotation-driven transaction-manager="transactionManagerBean"/>
