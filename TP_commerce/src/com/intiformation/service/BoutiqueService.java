@@ -82,6 +82,9 @@ public class BoutiqueService implements IBoutiqueService{
 	public void modifierProduit(Produit p) {
 		boutiqueDAO.modifierProduit(p);
 	}
+
+
+
 	
 	
 }

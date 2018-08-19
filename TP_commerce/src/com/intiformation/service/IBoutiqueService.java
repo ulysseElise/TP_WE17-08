@@ -32,4 +32,5 @@ public interface IBoutiqueService {
 	public void supprimerProduit(Long idP);
 
 	public void modifierProduit(Produit p);
+	
 }

@@ -68,6 +68,7 @@
 				<th>Prix</th>
 				<th>Quantite</th>
 				<th>Selectionne</th>
+				<th>Supprimer</th>
 <!-- 				<th style="color: grey;">Supprimer</th> -->
 <!-- 				<th style="color: green;">Modifier</th> -->
 			</tr>
@@ -79,6 +80,9 @@
 					<td>${prod.prix}</td>
 					<td>${prod.quantite}</td>
 					<td><input type="checkbox" value="${prod.selectionne}"/></td>
+					<td>
+				     	<a href="${pageContext.request.contextPath}/delete/poduit/${prod.idProduit}">Supprimer</a>
+				    </td>
 <!-- 					<td> -->
 <%-- 						<a href="${pageContext.request.contextPath}">Supprimer</a> --%>
 <!-- 					</td> -->

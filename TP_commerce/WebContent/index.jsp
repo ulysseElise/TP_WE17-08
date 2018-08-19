@@ -8,6 +8,6 @@
 </head>
 <body>
 
-	<% response.sendRedirect("/"); %>
+	<% response.sendRedirect("http://localhost:8080/TP_commerce/gestion/produit"); %>
 </body>
 </html>
